@@ -1,0 +1,33 @@
+<ion-view view-title="Promedios">
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-plus-circled" ng-click="nuevaMateria()" >
+        </button>
+        <button class="button button-icon icon ion-ios-minus-outline"
+                ng-click="data.showDelete = !data.showDelete">
+        </button>
+
+    </ion-nav-buttons>
+    <ion-content>
+        <div ng-repeat="materia in matrizMaterias">
+            <div class="list">
+                <div align="center"><p>{{materia.nombre}}</p><button class="button button-icon icon ion-plus-circled" ng-click="crearNota(materia)" >
+                </button></div>
+                <div class="row" ng-repeat="promedio in materia.notas">
+                    <div class="col">
+                        <ion-input class="item item-input">
+                            <input type="number" placeholder="Porcentaje" ng-model="promedio.nota">
+                        </ion-input> 
+                    </div>  
+                    <div class="col">
+                        <ion-input class="item item-input">
+                            <input type="number" placeholder="Porcentaje" ng-model="promedio.perc">
+                        </ion-input> 
+                    </div> 
+                    <div class="col">
+                        <p align="center">{{promedio.valor}}</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

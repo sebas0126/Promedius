@@ -1,0 +1,31 @@
+<ion-modal-view>
+
+
+    <div class="modal">
+
+        <!-- Header en la barra de la ventana Modal -->
+        <ion-header-bar class="bar-secondary">
+            <h1 class="title">Nueva Materia</h1>
+            <button class="button button-clear button-positive" ng-click="cerrarNuevaMateria()">Cancelar</button>
+        </ion-header-bar>
+
+        <!-- Area de contenido -->
+        <ion-content>
+
+            <form ng-submit="crearMateria(materia)">
+                <div class="list">
+                    <label class="item item-input">
+                        <input type="text" placeholder="Nombre de la materia" ng-model="materia.nombre">
+                    </label>
+                </div>
+                <div class="padding">
+                    <button type="submit" class="button button-block button-positive">Crear Materia</button>
+                </div>
+            </form>
+
+        </ion-content>
+
+    </div>
+
+</ion-modal-view>
+
